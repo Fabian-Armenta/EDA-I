@@ -1,0 +1,41 @@
+int opcion;
+void menu(int a){
+if (a==10) 
+    cargarProductos(); //Cargarproductos solo cuando llamo a menu desde main
+printf("************************************************************");
+printf("\nBienvenido a la floreria 'El Colibri'\n Es un gusto atenderte\n");
+printf("Menu: \n");
+printf(" 1 -> Mostrar elementos de la tienda\n 2-> Agregar elemento al carrito\n");
+printf(" 3-> Mostrar Carrito\n 4-> Eliminar elemento del carrito\n 5-> Salir de la app\n");
+printf("************************************************************\n");
+printf("Selecciona una opcion por favor: ");
+scanf("%d", &opcion);
+switch (opcion) {
+    case 1:
+     mostrarTienda();
+    break;
+    case 2:
+     agregarProductos();
+    break;
+
+    case 3:
+     mostrarCarrito();
+    break;
+
+    case 4:
+     eliminarProductos();
+    break;
+
+    case 5:
+    salirApp();
+    break;
+
+    default:
+    printf("Opcion no valida\n Adios!");
+    break; 
+
+
+}
+
+
+}
